@@ -1,0 +1,7 @@
+node_modules
+coverage
+dist
+templates
+rdkafka.d.ts
+jest.config.js
+__ormconfig.js

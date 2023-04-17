@@ -1,0 +1,36 @@
+app:
+  name: <service-name>
+  namespace: cmp-stage-my-project
+deployment:
+  name: <service-name>
+container:
+  name: <service-name>-container
+  image: harbor.kore.korewireless.com/kore-my-project/<service-name>
+  tag: latest
+service:
+  name: <service-name>
+  port: 9000
+ingress:
+  name: <service-name>
+  host: <service-name>.staging.k1d.k8.cin.kore.korewireless.com
+  env: staging
+kafka:
+  endpoint: my-project-broker-service
+  port: 9092
+postgres:
+  name: default
+  database: my-project
+  schema: public
+  dbusername: my-project
+  username: default
+  contact:
+    point: postgres-db
+    port: 5432
+variables:
+  workingEnv: staging
+  kafkaK8Broker: "kafka.cpro.dev.nginx.k1d.k8.cin.kore.korewireless.com:9094"
+  kafkaGroupId: "connectivity-<service-name>-group"
+  connectInternalToK8Kafka: false
+  dbRetryInterval: 1
+  brokersAvailabilityCheckInterval: 1
+  

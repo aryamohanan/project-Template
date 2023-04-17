@@ -1,0 +1,35 @@
+app:
+  name: <service-name>
+  namespace: cmp-edge-my-project
+deployment:
+  name: <service-name>
+container:
+  name: <service-name>-container
+  image: 
+  tag: latest
+service:
+  name: <service-name>
+  port: 9000
+ingress:
+  name: <service-name>
+  host: <service-name>.edge.k1d.k8.cin.kore.korewireless.com
+  env: edge
+kafka:
+  endpoint: my-project-broker-service
+  port: 9092
+postgres:
+  name: default
+  database: my-project
+  schema: public
+  dbusername: my-project
+  username: default
+  contact:
+    point: postgres-db
+    port: 5432
+variables:
+  workingEnv: edge
+  kafkaK8Broker: ""
+  kafkaGroupId: "connectivity-<service-name>-group"
+  connectInternalToK8Kafka: false
+  dbRetryInterval: 1
+  brokersAvailabilityCheckInterval: 1

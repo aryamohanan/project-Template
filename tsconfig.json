@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["rdkafka.d.ts", "node_modules/@types"],
+    "baseUrl": "./",
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    //    "strictNullChecks": true,
+    "lib": ["es5", "es6", "es2019", "es2021"],
+    "paths": {
+      "@controllers*": ["lib/controllers*"],
+      "@controllers": ["lib/controllers/index"],
+      "@models*": ["lib/models*"],
+      "@models": ["lib/models/index"],
+      "@services*": ["lib/services*"],
+      "@useCases*": ["lib/useCases*"],
+      "@config": ["config"],
+      "@db": ["data-source"]
+    }
+  },
+  "include": ["lib/**/*", "index.ts", "routes.ts", "data-source.ts", "config.ts"]
+}
