@@ -14,3 +14,13 @@ Creating new DB Entity put it to `lib\etities\*` directories that depends on you
 
 For clear code style `ESlint` and `prettier` are configured, so please use them before commit your project and minimize code
 errors and warnings. For comfort usages was added script command so please check `package.json` and enjoy them.
+
+
+# Create a new repository on the command line
+ 
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/c0ldlimit/vimcolors.git
+git push -u origin master
